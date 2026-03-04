@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜間費用計算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🌙 夜間費用計算器</h1>
+            
+            <div class="info-section">
+                <p class="description">晚上10點後，每分鐘扣13元</p>
+            </div>
+
+            <div class="time-display">
+                <div class="current-time">
+                    <span id="currentTime">00:00:00</span>
+                </div>
+                <div class="status-indicator">
+                    <span id="statusText">計算中...</span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="label">已消耗時間</span>
+                    <span class="value" id="elapsedTime">0分0秒</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">累積費用</span>
+                    <span class="value amount" id="totalAmount">$0</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn" class="btn btn-start">開始計算</button>
+                <button id="pauseBtn" class="btn btn-pause" disabled>暫停</button>
+                <button id="resetBtn" class="btn btn-reset">重置</button>
+            </div>
+
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-label">費用費率：</span>
+                    <span class="detail-value">13元/分鐘</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">開始時間：</span>
+                    <span class="detail-value" id="startTime">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">總分鐘數：</span>
+                    <span class="detail-value" id="totalMinutes">0</span>
+                </div>
+            </div>
+
+            <div class="history">
+                <h3>計費記錄</h3>
+                <div id="historyList" class="history-list">
+                    <p class="empty-text">尚無記錄</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"><\/script>
+</body>
+</html>
